@@ -1,0 +1,115 @@
+ body{
+   background-color: rgb(82, 56, 18);
+ }
+#title{
+    position: relative;
+    margin-top: 12rem;
+    left: 43%;
+}
+
+#button{
+    position: absolute;
+    left: 56%;
+  background-color: #ff8a65 ;
+    width: 5rem;
+    height: 2rem;
+}
+
+input{
+    position: absolute;
+    left: 40%;
+    width: 20rem;
+    height: 2rem;
+}
+
+.hide{
+    display: none;
+}
+
+#searchResults{
+    display: grid;    
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+}
+
+#card { 
+      width: 95%;
+    height: 100%;
+    padding-left: 1.5rem;
+    font-style: oblique;
+    color:  #eeedde;
+    background: #cedce7;
+    background: -webkit-linear-gradient(45deg,  #5e3823  0%,#2e373b 100%);
+    background: -o-linear-gradient(45deg,  #5e3823 0%,#ceb946 100%);
+    background: linear-gradient(45deg,  #5e3823  0%,#2e373b 100%);
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(207, 129, 129, 0.2);
+    transition: 0.3s;
+ }
+ .info{
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   grid-template-areas: 
+   'info1 info2';
+ }
+  
+  /* On mouse-over, add a deeper shadow */
+  #card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    
+  }
+#card h3{
+    font-size:  1.5rem;
+    font-weight: bold;
+    color: rgb(141, 139, 9);
+}
+#card h5, p{
+   
+  font-size:  1.0rem;
+  font-weight: bold;
+  line-height: 0.2em;
+  color: aliceblue
+}
+#card img{
+    position: relative;
+    width: 95%;
+    left: 1.0rem;
+}
+
+#card img:hover{
+    width: 75%;
+}
+
+ 
+
+@media screen and (max-width: 64rem){
+    .containers{
+      width: calc(33.333333% - 2rem);
+    }
+    #searchResults{
+        grid-template-columns: Repeat(3, 1fr);
+}
+  }
+  
+  @media screen and (max-width: 48rem){
+    .containers{
+      width: calc(50% - 2rem);
+    }
+    #searchResults{
+        grid-template-columns: Repeat(2, 1fr);
+}
+
+  }
+
+  
+  @media screen and (max-width: 32rem){
+    .container{
+      width: 100%;
+      margin: 0 0 2rem 0;
+    }
+
+    #searchResults{
+        grid-template-columns: 1fr;
+    }
+}
+
